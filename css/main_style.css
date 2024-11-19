@@ -468,13 +468,13 @@ html,body { background:#fff; }
   /* header */
   #top_contents { position:absolute; height:80px; }
   #top_contents:hover { background:none; }
-  #top_contents:hover .top_logo { top:32px; }
+  #top_contents:hover .top_logo { top:29px; }
   #top_contents:hover .top_logo > a > img:first-child { display:block; }
   #top_contents:hover .top_logo > a > img:last-child { display:none; }
   #top_contents:hover .top_menu { background:url("../images/worldwide.png") no-repeat top center / 45%; }
   #top_contents:hover .sitemap_open { background:url("../images/sitemap.png") no-repeat right center / 100%; }
   #top_contents.on { background:none; }
-  #top_contents.on .top_logo { top:32px; }
+  #top_contents.on .top_logo { top:29px; }
   #top_contents .top_division { height:80px; }
   #top_contents .top_logo { top:11px; width:175px; }
   #top_contents .top_menu { top:27px; right:37px; width:72px; }
@@ -584,6 +584,8 @@ html,body { background:#fff; }
 
   /* header */
   #top_contents { padding:0 24px; }
+  #top_contents:hover .top_logo { top:32px; }
+  #top_contents.on .top_logo { top:32px; }
   #top_contents .top_logo { width:150px; }
   #top_contents .top_menu { top:28px; width:60px; }
   #top_contents .top_menu .contents { margin:35px auto 0; padding:15px; }
