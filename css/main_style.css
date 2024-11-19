@@ -468,7 +468,7 @@ html,body { background:#fff; }
   /* header */
   #top_contents { position:absolute; height:80px; }
   #top_contents:hover { background:none; }
-  #top_contents:hover .top_logo { top:29px; }
+  #top_contents:hover .top_logo { top:32px; }
   #top_contents:hover .top_logo > a > img:first-child { display:block; }
   #top_contents:hover .top_logo > a > img:last-child { display:none; }
   #top_contents:hover .top_menu { background:url("../images/worldwide.png") no-repeat top center / 45%; }

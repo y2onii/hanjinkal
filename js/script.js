@@ -204,7 +204,7 @@ $(window).resize(function() {
 			$("#top_contents .mobile_menu_open").show();
 		});
 		$("#top_contents .mobile_menu .menu_list ul").hide();
-		$("#top_contents .mobile_menu .menu_list > li > button.main").click(function(){
+		$("#top_contents .mobile_menu .menu_list > li > button").click(function(){
 			if($(this).next().is(":visible"))
 			{
 				$("#top_contents .mobile_menu .menu_list ul").slideUp();
@@ -213,7 +213,7 @@ $(window).resize(function() {
 			}
 			else
 			{
-				$("#top_contents .mobile_menu .menu_list > li > button.main").removeClass("on");
+				$("#top_contents .mobile_menu .menu_list > li > button").removeClass("on");
 				$(this).addClass("on");
 				$("#top_contents .mobile_menu .menu_list > li > button::before").addClass("on");
 				$("#top_contents .mobile_menu .menu_list ul").slideUp();
