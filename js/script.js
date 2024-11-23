@@ -194,55 +194,6 @@ const news_slide = new Swiper(".news_wrap", {
 $(window).resize(function() {
 	if($(window).width() < 1025)
 	{	
-		// 반응형 메인메뉴
-		$("#top_contents .mobile_menu_open").click(function(){
-			$("#top_contents .mobile_nav").addClass("open");
-			$("#top_contents .mobile_menu_open").hide();
-		});
-		$("#top_contents .mobile_menu_close").click(function(){
-			$("#top_contents .mobile_nav").removeClass("open");
-			$("#top_contents .mobile_menu_open").show();
-		});
-		$("#top_contents .mobile_menu .menu_list ul").hide();
-		$("#top_contents .mobile_menu .menu_list > li > button").click(function(){
-			if($(this).next().is(":visible"))
-			{
-				$("#top_contents .mobile_menu .menu_list ul").slideUp();
-				$(this).removeClass("on");
-				$("#top_contents .mobile_menu .menu_list > li > button::before").removeClass("on");
-			}
-			else
-			{
-				$("#top_contents .mobile_menu .menu_list > li > button").removeClass("on");
-				$(this).addClass("on");
-				$("#top_contents .mobile_menu .menu_list > li > button::before").addClass("on");
-				$("#top_contents .mobile_menu .menu_list ul").slideUp();
-				$(this).next().slideDown();
-			}
-		});
-		$("#top_contents .mobile_menu .menu_list li ul li button").click(function(){
-			if($(this).next().is(":visible"))
-			{
-				$("#top_contents .mobile_menu .menu_list li ul li ul").slideUp();
-				$(this).removeClass("on");
-			}
-			else
-			{
-				$("#top_contents .mobile_menu .menu_list li ul li button").removeClass("on");
-				$(this).addClass("on");
-				$("#top_contents .mobile_menu .menu_list li ul li ul").slideUp();
-				$(this).next().slideDown();
-			}
-		});
-
-		$("#top_contents .mobile_menu .menu_list ul li a.news").click(function(){
-			$(this).addClass("on");
-		});
-
-		$("#top_contents .mobile_menu .menu_list ul li ul li a").click(function(){
-			$(this).addClass("on");
-		});
-
 		// 탑 버튼
 		$(window).scroll(function() {
 			if ($(this).scrollTop() > 100) { 
@@ -288,6 +239,56 @@ $(window).resize(function() {
 		});
 	}
 }).resize();
+
+// 모바일 메인메뉴
+$("#top_contents .mobile_menu_open").click(function(){
+	$("#top_contents .mobile_nav").addClass("open");
+	$("#top_contents .mobile_menu_open").hide();
+});
+$("#top_contents .mobile_menu_close").click(function(){
+	$("#top_contents .mobile_nav").removeClass("open");
+	$("#top_contents .mobile_menu_open").show();
+});
+$("#top_contents .mobile_menu .menu_list ul").hide();
+$("#top_contents .mobile_menu .menu_list > li > button").click(function(){
+	if($(this).next().is(":visible"))
+	{
+		$("#top_contents .mobile_menu .menu_list ul").slideUp();
+		$(this).removeClass("on");
+		$("#top_contents .mobile_menu .menu_list > li > button::before").removeClass("on");
+	}
+	else
+	{
+		$("#top_contents .mobile_menu .menu_list > li > button").removeClass("on");
+		$(this).addClass("on");
+		$("#top_contents .mobile_menu .menu_list > li > button::before").addClass("on");
+		$("#top_contents .mobile_menu .menu_list ul").slideUp();
+		$(this).next().slideDown();
+	}
+});
+$("#top_contents .mobile_menu .menu_list li ul li button").click(function(){
+	if($(this).next().is(":visible"))
+	{
+		$("#top_contents .mobile_menu .menu_list li ul li ul").slideUp();
+		$(this).removeClass("on");
+	}
+	else
+	{
+		$("#top_contents .mobile_menu .menu_list li ul li button").removeClass("on");
+		$(this).addClass("on");
+		$("#top_contents .mobile_menu .menu_list li ul li ul").slideUp();
+		$(this).next().slideDown();
+	}
+});
+
+$("#top_contents .mobile_menu .menu_list ul li a.news").click(function(){
+	$(this).addClass("on");
+});
+
+$("#top_contents .mobile_menu .menu_list ul li ul li a").click(function(){
+	$(this).addClass("on");
+});
+
 
 // 패밀리사이트
 $(".bottom_contents .contents").click(function(){
